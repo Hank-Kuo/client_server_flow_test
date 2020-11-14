@@ -1,0 +1,26 @@
+{% extends 'user/based.html' %}
+
+{% block content %}
+
+<div class="login-form" style="padding-top:10px">
+        <form action="" method="POST">
+                {% csrf_token %}
+                {%for field in reg_form%}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label}}">{{ field.label}}</label>
+                    {{ field }}
+                    <p style="color:red;">{{ field.errors.as_text }}</p>
+                </div>
+                {% endfor %}
+                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>
+                
+           
+                <div class="url-content">
+                    <a class="url-content"  href="{% url 'login' %}">GO BACK TO LOGIN</a>
+                </div>
+                
+            </form>
+           
+        
+</div>
+{% endblock %}

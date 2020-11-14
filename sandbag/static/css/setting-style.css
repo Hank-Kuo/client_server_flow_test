@@ -1,0 +1,8 @@
+.disabled {
+	opacity: 0.65; 
+	cursor: not-allowed;
+  }
+.swal-height {
+	height: 65vh;
+	width: 70vh;
+}

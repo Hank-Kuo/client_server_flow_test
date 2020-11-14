@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Server_test</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type=text/javascript>
+$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+
+    
+<script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    (function(){
+     $.getJSON(
+      $SCRIPT_ROOT+"/_count", // Your AJAX route here
+      function(data) {
+           $("#result").text(data.result);
+      }
+     );
+     setTimeout(arguments.callee, 1000);
+    })();
+</script>
+
+
+
+  </head>
+  <body>
+<h1>Hello word</h1>
+<h1 id=result></h1>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+         {% load static %}
+         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+         <link  href="{% static 'css/setting-token-style.css' %}" rel="stylesheet" media="all">
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    </head>
+
+    <body>
+        <div class="container">
+                <div id="table" class="table-editable">
+                  <table class="table">
+                    <tr>
+                      <th>Index</th>
+                      <th>Name</th>
+                      <th>Token</th>
+                      <th>Status</th>
+                    </tr>
+                  </table>
+                </div>        
+        </div>
+
+    </body>
+    
+    <script src="{% static 'js/setting-token.js' %}"></script>
+</html>
+
