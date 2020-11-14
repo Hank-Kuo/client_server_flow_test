@@ -1,5 +1,5 @@
 # Flow Test
-## CLient 
+## Client 
 ### Introduce
 The Hacker will use HTTP flood request to attack Client server.
 ## Server
